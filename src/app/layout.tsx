@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
-  title: "Logsfolio | Developer Portfolio",
+  title: "Md. Toufiqul Islam | Software Engineer",
   description:
-    "A clean looking FREE portfolio template for devs. Built with NextJS & TailwindCSS",
+    "Software Engineer with 6 years of experience in Node.js, Golang, Docker & Kubernetes. Specialized in building scalable systems and leading engineering teams.",
 };
 
 export default function RootLayout({
@@ -19,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${manrope.variable} font-sans antialiased`}>
         <Navbar />
         <div className="h-20"></div>
         {children}

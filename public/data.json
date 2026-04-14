@@ -7,6 +7,10 @@
           "path": "#experience"
         },
         {
+          "label": "Skills",
+          "path": "#skills"
+        },
+        {
           "label": "Projects",
           "path": "#projects"
         },
@@ -17,10 +21,6 @@
         {
           "label": "Testimonials",
           "path": "#testimonials"
-        },
-        {
-          "label": "Blogs",
-          "path": "#blogs"
         }
       ]
     },
@@ -35,122 +35,192 @@
     }
   },
   "personalInfo": {
-    "name": "Arif Hossain",
-    "title": "Full Stack Developer",
+    "name": "Md. Toufiqul Islam",
+    "title": "Software Engineer | Node.js, Golang, Docker, Kubernetes",
     "location": "Dhaka, Bangladesh",
-    "bio": "I am a passionate full-stack developer with a strong background in building modern, scalable web applications. Lets collaborate andbring your ideas to life."
+    "bio": "A software engineer with 6 years of professional experience working in high volume and fast paced environments. Skilled in creating scalable and impactful products using variety of technologies including Node.js, Go, Docker & kubernetes. Passionate about building robust systems, mentoring engineers, and optimizing performance at scale."
   },
   "contactInfo": {
-    "email": "devarifhossain@gmail.com",
-    "phone": "123-456-7890",
-    "linkedin": "https://www.linkedin.com/in/ariflogs/",
-    "github": "https://github.com/ariflogs",
-    "twitter": "https://twitter.com/ariflogs",
-    "website": "https://johndoe.dev"
+    "email": "toufiq.austcse@gmail.com",
+    "phone": "",
+    "linkedin": "https://www.linkedin.com/in/toufiqcse36/",
+    "github": "https://github.com/toufiq-austcse",
+    "twitter": "",
+    "website": ""
   },
   "skills": {
-    "languages": ["JavaScript", "Python", "Java", "C++"],
-    "frameworks": ["React", "Node.js", "Express", "Django", "Spring Boot"],
-    "databases": ["MySQL", "MongoDB", "PostgreSQL"],
-    "tools": ["Git", "Docker", "Kubernetes", "Jenkins", "AWS", "GCP"]
+    "languages": ["Node.js", "Go (Golang)", "JavaScript", "TypeScript"],
+    "frameworks": ["Gin", "Express.js", "Nest.js", "React"],
+    "databases": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "InfluxDB", "Typesense"],
+    "infrastructure": ["Docker", "Kubernetes", "AWS S3", "SQS", "SNS", "Lambda", "CloudFront", "Apache Airflow"],
+    "cicd": ["Github Actions"],
+    "testing": ["Jest", "Supertest"],
+    "monitoring": ["Grafana", "New Relic", "Sentry", "OpenTelemetry", "SigNoz"],
+    "other": ["REST API", "GraphQL", "RabbitMQ", "TypeORM", "GORM", "Git", "Linux", "Firebase", "Copilot"]
   },
   "projects": [
     {
       "id": "1",
-      "title": "Makers Tracker",
-      "description": "A project goal tracking tool for professionals. It let's you create project, assign goals and generate analytics to track progress",
-      "technologies": ["Typescript", "Next.js", "TailwindCSS", "MySQL"],
-      "live_url": "https://makerstracker.com",
-      "code_repo_url": "https://makerstracker.com",
+      "title": "Video Touch",
+      "description": "A Video Hosting & Streaming Platform with video transcoding, thumbnail generation, and on-demand streaming via CDN",
+      "technologies": [
+        "Node.js",
+        "NestJS",
+        "GraphQL",
+        "MongoDB",
+        "RabbitMQ",
+        "BullMQ",
+        "S3",
+        "CloudFront",
+        "Docker",
+        "Next.js",
+        "shadcn/ui"
+      ],
+      "live_url": "https://github.com/toufiq-austcse/video-touch",
+      "code_repo_url": "https://github.com/toufiq-austcse/video-touch",
       "cover": "/assets/project_1.jpeg"
     },
     {
       "id": "2",
-      "title": "Pricing Bees",
-      "description": "A no-code pricing page builder. Build professional-looking pricing pages, customize looks, and get detailed analytics to optimize your pricing strategy.",
-      "technologies": ["Typescript", "Next.js", "Shadcn/ui", "Convex"],
-      "live_url": "https://pricingbees.com",
-      "code_repo_url": "https://pricingbees.com",
+      "title": "Deploybl",
+      "description": "Platform as a Service (PaaS) to simplify deployment and management of applications with automatic URL generation and support for any language",
+      "technologies": [
+        "Go(Golang)",
+        "Gin",
+        "MongoDB",
+        "RabbitMQ",
+        "Traefik",
+        "S3",
+        "Firebase",
+        "Docker",
+        "Next.js",
+        "shadcn/ui"
+      ],
+      "live_url": "https://github.com/toufiq-austcse/deploybl",
+      "code_repo_url": "https://github.com/toufiq-austcse/deploybl",
       "cover": "/assets/project_2.jpeg"
-    },
-    {
-      "id": "3",
-      "title": "Indie Hustles",
-      "description": "A listing site for Indie hackers to promote their products",
-      "technologies": ["Typescript", "Next.js", "TailwindCSS", "Airtable"],
-      "live_url": "https://indiehustles.com",
-      "code_repo_url": "https://indiehustles.com",
-      "cover": "/assets/project_3.jpeg"
     }
   ],
   "workExperience": [
     {
-      "id": "1",
-      "company": "Tech Corp",
-      "companyWebsite": "https://example.com",
-      "role": "Senior Full Stack Developer",
-      "startDate": "Jan 2020",
+      "id": "rbd",
+      "company": "RoBenDevs",
+      "companyWebsite": "https://github.com/toufiq-austcse",
+      "role": "Lead Software Engineer",
+      "startDate": "January 2026",
       "endDate": "Present",
-      "technologies": ["Socket.io", "Node.js", "Express", "React"],
+      "technologies": [
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "RabbitMQ",
+        "WebSocket",
+        "Docker",
+        "Kubernetes"
+      ],
       "keyResponsibilities": [
-        "Led a team of developers to create scalable web applications.",
-        "Implemented RESTful and GraphQL APIs using Node.js and Express.",
-        "Developed front-end applications using React and Next.js.",
-        "Integrated third-party services and APIs to enhance application functionality.",
-        "Mentored junior developers and conducted code reviews."
+        "Leading the Full Stack Engineering team"
       ]
     },
     {
-      "id": "2",
-      "company": "Web Solutions",
-      "companyWebsite": "https://example.com",
-      "role": "Full Stack Developer",
-      "startDate": "Jun 2017",
-      "endDate": "Dec 2019",
-      "technologies": ["MongoDB", "Express", "React", "Node.js"],
+      "id": "jiak",
+      "company": "Jiak Technology",
+      "companyWebsite": "https://github.com/toufiq-austcse",
+      "role": "Senior Software Engineer (Remote)",
+      "startDate": "September 2025",
+      "endDate": "December 2025",
+      "technologies": [
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "BullMQ",
+        "Twilio",
+        "WebSocket",
+        "Docker",
+        "Kubernetes"
+      ],
       "keyResponsibilities": [
-        "Designed and developed web applications using JavaScript and React.",
-        "Built and maintained server-side APIs with Node.js and Express.",
-        "Collaborated with cross-functional teams to deliver high-quality products.",
-        "Ensured applications are responsive and performant.",
-        "Participated in Agile ceremonies and contributed to project planning."
+        "Owned end-to-end development of core merchant services, including Digital Menu Management, real-time Waitlist Queuing, and automated merchant-facing Notifications, serving 50+ restaurants",
+        "Developed the core public-facing REST API to power the customer reservation platform",
+        "Executed strategic refactoring of legacy codebase to improve code reusability",
+        "Implemented asynchronous job queue using Redis and BullMQ for background tasks",
+        "Partnered with frontend and design teams to define clear API contracts"
+      ]
+    },
+    {
+      "id": "10minuteschool",
+      "company": "10 Minute School",
+      "companyWebsite": "https://github.com/toufiq-austcse",
+      "role": "Engineering Manager",
+      "startDate": "August 2019",
+      "endDate": "August 2025",
+      "technologies": [
+        "Node.js",
+        "Go(Golang)",
+        "NestJS",
+        "RabbitMQ",
+        "AWS",
+        "Firebase",
+        "Docker",
+        "Kubernetes",
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "keyResponsibilities": [
+        "Promoted through Software Engineer and Senior Software Engineer to Lead for consistent high performance and leadership",
+        "Rearchitected the caching strategy for the critical Central Routine API, slashing peak-hour p99 latency by over 85% to ensure a reliable user experience under high load",
+        "Led Live Video Streaming infrastructure for conducting live classes with real-time interactions. Serves around 30k students participating in different live classes and handling approximately 100k RPM during peak hours every day",
+        "Architected and deployed an in-house Video Processing Pipeline, reducing monthly operational costs by 75% while processing over 800 videos",
+        "Reduced cloud infrastructure costs by 60% through strategic optimization initiatives",
+        "Led a sub-team to develop central Learning Report service that improved user engagement by providing comprehensive weekly and monthly reports",
+        "Led end-to-end implementation of OpenTelemetry across microservices that enhanced system monitoring capabilities",
+        "Developed REST API for different microservices of 10MS Billing System, handling 10k+ transactions every day",
+        "Designed and led the development of an automated push notification system using event-driven Microservice Architecture",
+        "Implemented REST API for Exam Service, resulting in onboarding 140k new users",
+        "Collaborated with cross functional teams to design, develop, and deploy features to production",
+        "Mentored junior engineers & interns to build production ready services",
+        "Integrated AWS tools like S3, SNS, SQS and Lambda with the application"
+      ]
+    },
+    {
+      "id": "khamare",
+      "company": "Khamar-e",
+      "companyWebsite": "https://github.com/toufiq-austcse",
+      "role": "Full Stack Developer",
+      "startDate": "February 2019",
+      "endDate": "July 2019",
+      "technologies": [
+        "Node.js",
+        "RabbitMQ",
+        "MongoDB",
+        "React"
+      ],
+      "keyResponsibilities": [
+        "Developed front-end and back-end of Health Tracker IOT device for tracking cattle activity"
       ]
     }
   ],
   "education": [
     {
-      "id": "1",
-      "institution": "Coursera",
-      "degree": "Full Stack Web Development with React",
-      "description": "Completed a Coursera specialization that focused on building full-stack web applications using React, Node.js, Express, and MongoDB. Learned best practices for designing and implementing responsive, scalable, and secure web applications.",
-      "startDate": "Sep 2013",
-      "endDate": "May 2017"
-    },
-    {
-      "id": "2",
-      "institution": "University of California, Berkeley",
-      "degree": "Bachelor of Science in Computer Science",
-      "description": "Completed a comprehensive curriculum in computer science, including courses in data structures, algorithms, software engineering, and artificial intelligence. Worked on several projects, including a web application for managing student organizations and a mobile app for tracking fitness activities.",
-      "startDate": "Sep 2013",
-      "endDate": "May 2017"
+      "id": "aust",
+      "institution": "Ahsanullah University of Science and Technology",
+      "degree": "Bachelor of Science in Computer Science and Engineering",
+      "description": "Undergraduate Thesis: Greenness Analysis of Dhaka City Using the NDVI MODIS Satellite Database",
+      "startDate": "November 2015",
+      "endDate": "February 2020"
     }
   ],
   "testimonials": [
     {
       "id": "1",
-      "name": "Jane Smith",
+      "name": "Abu Sufian",
+      "linkedin": "https://www.linkedin.com/in/abusufian92/",
       "avatar": "/assets/testimonial_1_avatar.jpg",
-      "title": "Project Manager",
-      "company": "Tech Solutions Inc.",
-      "feedback": "John is a fantastic developer who consistently delivers high-quality work. His ability to solve complex problems is impressive."
-    },
-    {
-      "id": "2",
-      "name": "Mike Johnson",
-      "avatar": "/assets/testimonial_2_avatar.jpg",
-      "title": "CEO",
-      "company": "Web Innovators LLC",
-      "feedback": "John is a highly skilled developer who brings a lot of value to our projects. His expertise in full stack development is top-notch."
+      "title": "CTO",
+      "company": "JIAK Technology",
+      "feedback": "As the CTO at JIAK, I had the opportunity to work closely with Md Toufiqul Islam, and he consistently proved to be one of the most grounded, dependable, and high-impact backend engineers on the team. During our crucial 0→1 phase, Toufiq made several foundational contributions that strengthened the core architecture of JIAK’s merchant and customer systems.\n\nHe has a remarkable ability to transform complexity into clarity. Whether refactoring legacy modules, establishing cleaner design patterns, or bringing structure to areas that needed a more scalable approach, his work always elevated the codebase and set new standards for maintainability. His problem-solving approach mirrors what I expect from top startup engineers: thoughtful root-cause analysis, disciplined execution, and the instinct to always leave systems in a better state than he found them.\n\nBeyond backend engineering, Toufiq contributed across the stack—supporting infrastructure work, collaborating closely with DevOps, and helping maintain our monitoring and observability systems. His involvement ensured our services remained stable, predictable, and production-ready as we continued to scale.\n\nToufiq embodies a true startup-engineer mindset — proactive, resourceful, deeply curious, and unfazed by ambiguity. He collaborates exceptionally well across teams and brings a level of maturity and calmness that’s rare. His contributions to post-mortems, technical discussions, and architecture improvements were consistently well-structured, insightful, and action-oriented.\n\nHe is an engineer who takes ownership, thinks long-term, and operates with a builder’s mentality. Any team looking to add a thoughtful, reliable, and scalable-system-oriented backend engineer would be very fortunate to have him.\n\nI strongly recommend Md Toufiqul Islam for any challenging backend or platform engineering role — he will raise the technical bar wherever he goes."
     }
-  ]
+  ],
+  "certifications": [],
+  "hobbies": []
 }

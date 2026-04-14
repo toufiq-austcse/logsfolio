@@ -28,7 +28,10 @@ export default function ThemeToggler() {
   }, [globalTheme]);
 
   return (
-    <button onClick={toggleDarkTheme} className="mb text-gray-350">
+    <button
+      onClick={toggleDarkTheme}
+      className="mb text-gray-700 dark:text-gray-300"
+    >
       {globalTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>
   );

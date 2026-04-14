@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getBlogPosts, getJSONData } from "@/lib/serverUtils";
+import { getJSONData } from "@/lib/serverUtils";
 import Link from "next/link";
 import {
   EnvelopeClosedIcon,
@@ -18,12 +18,10 @@ import {
   TwitterLogoIcon,
   GlobeIcon,
 } from "@radix-ui/react-icons";
-import { Avatar } from "@/components/ui/avatar";
 import Image from "next/image";
 
 export default async function Home() {
   const data = await getJSONData();
-  const posts = await getBlogPosts();
 
   return (
     <main>
@@ -34,13 +32,15 @@ export default async function Home() {
       >
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           <div className="w-1/2 mx-auto lg:w-1/3">
-            <Image
-              src="/assets/profile.jpg"
-              width={280}
-              height={280}
-              alt="Developer"
-              className="mx-auto aspect-square overflow-hidden object-cover object-center rounded-full"
-            />
+            <div className="mx-auto size-[280px] overflow-hidden rounded-full">
+              <Image
+                src="https://dezjzojvmw4by.cloudfront.net/photos/toufiq.jpeg"
+                width={280}
+                height={280}
+                alt="Md. Toufiqul Islam"
+                className="h-full w-full scale-110 object-cover object-[center_20%]"
+              />
+            </div>
           </div>
           <div className="w-full lg:w-2/3 space-y-4">
             <div className="space-y-2">
@@ -48,7 +48,7 @@ export default async function Home() {
                 Hey 👋, I&apos;m {data.personalInfo.name}
               </h1>
             </div>
-            <p className="max-w-[600px] lg:text-lg text-gray-500 dark:text-gray-400">
+            <p className="max-w-[600px] text-gray-600 dark:text-gray-300 lg:text-lg">
               {data.personalInfo.bio}
             </p>
             <div className="space-x-4">
@@ -114,16 +114,49 @@ export default async function Home() {
                   {exp.company}
                 </Link>
               </h4>
-              <div className="text-gray-500 dark:text-gray-400">
+              <div className="text-gray-600 dark:text-gray-300">
                 {exp.startDate} - {exp.endDate}
               </div>
               <div className="mt-2">
                 <h6 className="font-medium">Key Responsibilities:</h6>
-                <ul className="text-gray-500 text-sm list-disc pl-4">
+                <ul className="list-disc pl-4 text-base text-gray-600 dark:text-gray-300">
                   {exp.keyResponsibilities.map((resp) => (
                     <li key={resp}>{resp}</li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Technical Skills Section */}
+      <section
+        id="skills"
+        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
+      >
+        <h2 className="font-bold text-3xl md:text-5xl mb-12">Technical Skills</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { label: "Programming Languages", items: data.skills.languages },
+            { label: "Frameworks", items: data.skills.frameworks },
+            { label: "Databases", items: data.skills.databases },
+            { label: "Infrastructure Tools", items: data.skills.infrastructure },
+            { label: "CI/CD", items: data.skills.cicd },
+            { label: "Testing", items: data.skills.testing },
+            { label: "Monitoring", items: data.skills.monitoring },
+            { label: "Other Related Skills", items: data.skills.other },
+          ].map(({ label, items }) => (
+            <div key={label}>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                {label}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {items.map((item) => (
+                  <Badge key={item} variant="secondary">
+                    {item}
+                  </Badge>
+                ))}
               </div>
             </div>
           ))}
@@ -206,70 +239,55 @@ export default async function Home() {
 
               <h4 className="text-xl font-medium">{ed.degree}</h4>
               <h5 className="font-medium">{ed.institution}</h5>
-              <div className="text-gray-500 dark:text-gray-400">
+              <div className="text-gray-600 dark:text-gray-300">
                 {ed.startDate} - {ed.endDate}
               </div>
-              <p className="mt-2 text-sm text-gray-500">{ed.description}</p>
+              <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
+                {ed.description}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section
-        id="testimonials"
-        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
-      >
-        <h2 className="font-bold text-3xl md:text-5xl mb-12">Testimonials</h2>
+       {/* Testimonials Section */}
+       {data.visual.home.sections.testimonial && (
+       <section
+         id="testimonials"
+         className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
+       >
+         <h2 className="font-bold text-3xl md:text-5xl mb-12">Testimonials</h2>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {data.testimonials.map((t) => (
-            <Card className="p-6 text-left" key={t.id}>
-              <blockquote className="font-medium lg:text-og">
-                &ldquo;{t.feedback}.&rdquo;
-              </blockquote>
-              <div className="mt-4 flex items-center gap-3">
-                <Avatar>
-                  <Image
-                    height={50}
-                    width={50}
-                    alt="testimonial avatar"
-                    src={t.avatar}
-                  />
-                </Avatar>
-                <div>
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
+         <div className="grid grid-cols-1 gap-6">
+           {data.testimonials.map((t) => (
+             <Card className="w-full p-6 text-left" key={t.id}>
+               <blockquote className="whitespace-pre-wrap font-sans text-base leading-relaxed text-gray-700 dark:text-gray-200">
+                 &ldquo;{t.feedback}&rdquo;
+               </blockquote>
+                <div className="mt-4">
+                  <div className="font-semibold">
+                    {t.linkedin ? (
+                      <Link
+                        href={t.linkedin}
+                        target="_blank"
+                        className="hover:underline text-primary"
+                      >
+                        {t.name}
+                      </Link>
+                    ) : (
+                      t.name
+                    )}
+                  </div>
+                  <div className="text-base text-gray-600 dark:text-gray-300">
                     {t.title} @ {t.company}
                   </div>
                 </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
+             </Card>
+           ))}
+         </div>
+       </section>
+       )}
 
-      {/* Blogs Section */}
-      <section
-        id="blogs"
-        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
-      >
-        <h2 className="font-bold text-3xl md:text-5xl mb-12">Blogs</h2>
-
-        <div className="flex flex-col space-y-8">
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blogs/${post.slug}`}>
-              <h3 className="text-xl md:text-3xl font-semibold">
-                {post.title}
-              </h3>
-              <p className="md:text-lg font-light">{post.description}</p>
-              <p className="text-sm font-medium text-gray-500 mt-2">
-                Published at: {post.publishDate}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
-}
+       </main>
+   );
+ }

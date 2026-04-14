@@ -44,7 +44,11 @@ export interface Skills {
   languages: string[];
   frameworks: string[];
   databases: string[];
-  tools: string[];
+  infrastructure: string[];
+  cicd: string[];
+  testing: string[];
+  monitoring: string[];
+  other: string[];
 }
 
 export interface Project {
@@ -83,6 +87,7 @@ export interface Testimonial {
   title: string;
   company: string;
   feedback: string;
+  linkedin?: string;
 }
 
 export interface Certification {

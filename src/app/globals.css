@@ -51,30 +51,51 @@ html {
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
   }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-size: 1.03rem;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.blog-post {
+  font-size: 1.1rem;
+  line-height: 1.85;
 }
 
 .blog-post h1 {
   font-size: 2.5em;
+  line-height: 1.2;
 }
 
 .blog-post h2 {
   font-size: 2em;
+  line-height: 1.25;
 }
 
 .blog-post h3 {
   font-size: 1.75em;
+  line-height: 1.3;
 }
 
 .blog-post h4 {
   font-size: 1.5em;
+  line-height: 1.35;
 }
 
 .blog-post h5 {
   font-size: 1.25em;
+  line-height: 1.4;
 }
 
 .blog-post h6 {
   font-size: 1em;
+  line-height: 1.45;
 }
 
 .blog-post p {
@@ -179,6 +200,6 @@ html {
 }
 
 body.dark {
-  background: #000;
-  color: #aeaeae;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
 }

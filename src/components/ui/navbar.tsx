@@ -3,7 +3,6 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { JSX, SVGProps } from "react";
 import { getJSONData } from "@/lib/serverUtils";
-import Image from "next/image";
 import ThemeToggler from "./themeToggler";
 
 export default async function Navbar() {
@@ -13,12 +12,19 @@ export default async function Navbar() {
     <header className="fixed top-0 z-50 w-full bg-white shadow-sm dark:bg-gray-950">
       <div className="container max-w-5xl mx-auto flex h-18 items-center justify-between py-2 px-4 md:px-6">
         <Link href="/" className="flex items-center" prefetch={false}>
-          <Image
-            src="/assets/logo.png"
-            height={60}
-            width={60}
-            alt={"devfolio logo"}
-          />
+          {(() => {
+            const initials = data.personalInfo.name
+              .split(" ")
+              .filter((p) => p.length > 2)
+              .slice(0, 2)
+              .map((p) => p[0].toUpperCase())
+              .join("");
+            return (
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm select-none">
+                {initials}
+              </div>
+            );
+          })()}
         </Link>
         <nav className="hidden space-x-4 lg:flex">
           <ThemeToggler />
@@ -26,7 +32,7 @@ export default async function Navbar() {
             <Link
               href={item.path}
               key={item.path}
-              className="text-sm transition-colors text-gray-350 hover:text-primary dark:hover:text-gray-50"
+              className="text-sm text-gray-700 transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-gray-50"
             >
               {item.label}
             </Link>
@@ -46,7 +52,7 @@ export default async function Navbar() {
                 <Link
                   href={item.path}
                   key={item.path}
-                  className="text-sm transition-colors text-gray-350 hover:text-primary dark:hover:text-gray-50"
+                  className="text-sm text-gray-700 transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-gray-50"
                 >
                   {item.label}
                 </Link>
