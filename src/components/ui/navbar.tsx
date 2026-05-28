@@ -12,19 +12,9 @@ export default async function Navbar() {
     <header className="fixed top-0 z-50 w-full bg-white shadow-sm dark:bg-gray-950">
       <div className="container max-w-5xl mx-auto flex h-18 items-center justify-between py-2 px-4 md:px-6">
         <Link href="/" className="flex items-center" prefetch={false}>
-          {(() => {
-            const initials = data.personalInfo.name
-              .split(" ")
-              .filter((p) => p.length > 2)
-              .slice(0, 2)
-              .map((p) => p[0].toUpperCase())
-              .join("");
-            return (
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm select-none">
-                {initials}
-              </div>
-            );
-          })()}
+          <span className="font-extrabold text-base md:text-lg select-none">
+            Md. Toufiqul Islam
+          </span>
         </Link>
         <nav className="hidden space-x-4 lg:flex">
           <ThemeToggler />

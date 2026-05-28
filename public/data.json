@@ -49,14 +49,62 @@
     "website": ""
   },
   "skills": {
-    "languages": ["Node.js", "Go (Golang)", "JavaScript", "TypeScript"],
-    "frameworks": ["Gin", "Express.js", "Nest.js", "React"],
-    "databases": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "InfluxDB", "Typesense"],
-    "infrastructure": ["Docker", "Kubernetes", "AWS S3", "SQS", "SNS", "Lambda", "CloudFront", "Apache Airflow"],
-    "cicd": ["Github Actions"],
-    "testing": ["Jest", "Supertest"],
-    "monitoring": ["Grafana", "New Relic", "Sentry", "OpenTelemetry", "SigNoz"],
-    "other": ["REST API", "GraphQL", "RabbitMQ", "TypeORM", "GORM", "Git", "Linux", "Firebase", "Copilot"]
+    "languages": [
+      "Node.js",
+      "Go (Golang)",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Gin",
+      "Express.js",
+      "Nest.js",
+      "React"
+    ],
+    "databases": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "InfluxDB",
+      "Typesense"
+    ],
+    "infrastructure": [
+      "Docker",
+      "Kubernetes",
+      "AWS S3",
+      "SQS",
+      "SNS",
+      "Lambda",
+      "CloudFront",
+      "Apache Airflow"
+    ],
+    "cicd": [
+      "Github Actions"
+    ],
+    "testing": [
+      "Jest",
+      "Supertest"
+    ],
+    "monitoring": [
+      "Grafana",
+      "New Relic",
+      "Sentry",
+      "OpenTelemetry",
+      "SigNoz"
+    ],
+    "other": [
+      "REST API",
+      "GraphQL",
+      "RabbitMQ",
+      "TypeORM",
+      "GORM",
+      "Git",
+      "Linux",
+      "Firebase",
+      "Github Copilot",
+      "Claude Code"
+    ]
   },
   "projects": [
     {
@@ -78,7 +126,7 @@
       ],
       "live_url": "https://github.com/toufiq-austcse/video-touch",
       "code_repo_url": "https://github.com/toufiq-austcse/video-touch",
-      "cover": "/assets/project_1.jpeg"
+      "cover": "/assets/vdiotouch.png"
     },
     {
       "id": "2",
@@ -98,14 +146,15 @@
       ],
       "live_url": "https://github.com/toufiq-austcse/deploybl",
       "code_repo_url": "https://github.com/toufiq-austcse/deploybl",
-      "cover": "/assets/project_2.jpeg"
+      "cover": "/assets/deploybl.png"
     }
   ],
   "workExperience": [
     {
       "id": "rbd",
       "company": "RoBenDevs",
-      "companyWebsite": "https://github.com/toufiq-austcse",
+      "companyWebsite": "https://robendevs.com",
+      "companyIntro": "RoBenDevs is a fast-growing company based in Bangladesh developing innovative solutions that meet the needs of today's ever-changing technological landscape.",
       "role": "Lead Software Engineer",
       "startDate": "January 2026",
       "endDate": "Present",
@@ -124,8 +173,8 @@
     },
     {
       "id": "jiak",
-      "company": "Jiak Technology",
-      "companyWebsite": "https://github.com/toufiq-austcse",
+      "company": "JIAK Technology (Stealth)",
+      "companyIntro": "JIAK is a Singapore-based SaaS startup modernizing the F&B industry with an all-in-one platform for reservations, digital ordering, POS, and analytics—helping restaurants streamline operations and grow through smarter tech.",
       "role": "Senior Software Engineer (Remote)",
       "startDate": "September 2025",
       "endDate": "December 2025",
@@ -150,7 +199,8 @@
     {
       "id": "10minuteschool",
       "company": "10 Minute School",
-      "companyWebsite": "https://github.com/toufiq-austcse",
+      "companyWebsite": "https://10minuteschool.com",
+      "companyIntro": "10 Minute School is Bangladesh's largest EdTech platform, offering free classes, tutorials, and quizzes for students (grades 1–12), university admissions, and skill development.",
       "role": "Engineering Manager",
       "startDate": "August 2019",
       "endDate": "August 2025",
@@ -167,7 +217,7 @@
         "MongoDB"
       ],
       "keyResponsibilities": [
-        "Promoted through Software Engineer and Senior Software Engineer to Lead for consistent high performance and leadership",
+        "Promoted through Software Engineer and Senior Software Engineer to Engineering Manager for consistent high performance and leadership",
         "Rearchitected the caching strategy for the critical Central Routine API, slashing peak-hour p99 latency by over 85% to ensure a reliable user experience under high load",
         "Led Live Video Streaming infrastructure for conducting live classes with real-time interactions. Serves around 30k students participating in different live classes and handling approximately 100k RPM during peak hours every day",
         "Architected and deployed an in-house Video Processing Pipeline, reducing monthly operational costs by 75% while processing over 800 videos",
@@ -185,7 +235,8 @@
     {
       "id": "khamare",
       "company": "Khamar-e",
-      "companyWebsite": "https://github.com/toufiq-austcse",
+      "companyWebsite": "https://www.linkedin.com/company/khamar-e/",
+      "companyIntro": "Khamar-e is an agri-tech startup working towards a data-driven farming and supply chain ecosystem in Bangladesh",
       "role": "Full Stack Developer",
       "startDate": "February 2019",
       "endDate": "July 2019",

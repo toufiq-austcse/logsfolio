@@ -63,7 +63,8 @@ export interface Project {
 export interface WorkExperience {
   id: string;
   company: string;
-  companyWebsite: string;
+  companyWebsite?: string;
+  companyIntro?: string;
   role: string;
   startDate: string;
   endDate: string;
