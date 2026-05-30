@@ -23,6 +23,19 @@ import Image from "next/image";
 export default async function Home() {
     const data = await getJSONData();
 
+    const experienceGroups = data.workExperience.reduce(
+        (groups, exp) => {
+            const last = groups[groups.length - 1];
+            if (last && last.company === exp.company) {
+                last.entries.push(exp);
+            } else {
+                groups.push({company: exp.company, entries: [exp]});
+            }
+            return groups;
+        },
+        [] as {company: string; entries: typeof data.workExperience}[]
+    );
+
     return (
         <main>
             {/* Banner Section */}
@@ -95,43 +108,64 @@ export default async function Home() {
                 </h2>
                 <div
                     className="relative pl-6 after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-gray-500/20 dark:after:bg-gray-400/20 grid gap-10">
-                    {data.workExperience.map((exp) => (
-                        <div key={exp.id} className="grid gap-1 relative">
-                            <div
-                                className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-2 dark:bg-gray-50"/>
+                    {experienceGroups.map((group) => {
+                        const first = group.entries[0];
+                        const oldest = group.entries[group.entries.length - 1];
+                        const allTech = Array.from(new Set(group.entries.flatMap((e) => e.technologies)));
 
-                            <h4 className="text-xl font-medium">
-                                {exp.role} @
-                                {exp.companyWebsite ? (
-                                    <Link
-                                        href={exp.companyWebsite}
-                                        target="_blank"
-                                        className="ml-2 text-primary"
-                                    >
-                                        {exp.company}
-                                    </Link>
-                                ) : (
-                                    <span className="ml-2">{exp.company}</span>
+                        return (
+                            <div key={group.company} className="grid gap-1 relative">
+                                <div
+                                    className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-2 dark:bg-gray-50"/>
+
+                                <h4 className="text-xl font-medium">
+                                    {first.companyWebsite ? (
+                                        <Link
+                                            href={first.companyWebsite}
+                                            target="_blank"
+                                            className="text-primary"
+                                        >
+                                            {group.company}
+                                        </Link>
+                                    ) : (
+                                        <span>{group.company}</span>
+                                    )}
+                                </h4>
+                                {first.companyIntro && (
+                                    <p className="text-sm italic text-gray-600 dark:text-gray-300">
+                                        {first.companyIntro}
+                                    </p>
                                 )}
-                            </h4>
-                            {exp.companyIntro && (
-                                <p className="text-sm italic text-gray-600 dark:text-gray-300">
-                                    {exp.companyIntro}
-                                </p>
-                            )}
-                            <div className="text-gray-600 dark:text-gray-300">
-                                {exp.startDate} - {exp.endDate}
-                            </div>
-                            <div className="mt-2">
-                                <h6 className="font-medium">Key Responsibilities:</h6>
-                                <ul className="list-disc pl-4 text-base text-gray-600 dark:text-gray-300">
-                                    {exp.keyResponsibilities.map((resp) => (
-                                        <li key={resp}>{resp}</li>
+                                <div className="text-gray-600 dark:text-gray-300">
+                                    {oldest.startDate} - {first.endDate}
+                                </div>
+                                {allTech.length > 0 && (
+                                    <div className="flex flex-wrap gap-1.5 mt-2">
+                                        {allTech.map((tech) => (
+                                            <Badge key={tech} variant="secondary" className="text-xs">
+                                                {tech}
+                                            </Badge>
+                                        ))}
+                                    </div>
+                                )}
+                                <div className="mt-4 grid gap-6 pl-4 border-l-2 border-gray-200 dark:border-gray-700">
+                                    {group.entries.map((exp) => (
+                                        <div key={exp.id}>
+                                            <h5 className="font-medium">{exp.role}</h5>
+                                            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                                {exp.startDate} - {exp.endDate}
+                                            </div>
+                                            <ul className="list-disc pl-4 text-sm text-gray-600 dark:text-gray-300">
+                                                {exp.keyResponsibilities.map((resp) => (
+                                                    <li key={resp}>{resp}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     ))}
-                                </ul>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </section>
 

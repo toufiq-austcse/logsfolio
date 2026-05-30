@@ -173,7 +173,7 @@
     },
     {
       "id": "jiak",
-      "company": "JIAK Technology (Stealth)",
+      "company": "JIAK Technology (Stealth Startup)",
       "companyIntro": "JIAK is a Singapore-based SaaS startup modernizing the F&B industry with an all-in-one platform for reservations, digital ordering, POS, and analytics—helping restaurants streamline operations and grow through smarter tech.",
       "role": "Senior Software Engineer (Remote)",
       "startDate": "September 2025",
@@ -197,38 +197,78 @@
       ]
     },
     {
-      "id": "10minuteschool",
+      "id": "10minuteschool-em",
       "company": "10 Minute School",
       "companyWebsite": "https://10minuteschool.com",
       "companyIntro": "10 Minute School is Bangladesh's largest EdTech platform, offering free classes, tutorials, and quizzes for students (grades 1–12), university admissions, and skill development.",
       "role": "Engineering Manager",
-      "startDate": "August 2019",
+      "startDate": "June 2025",
       "endDate": "August 2025",
       "technologies": [
-        "Node.js",
         "Go(Golang)",
+        "Node.js",
+        "Kubernetes",
+        "AWS",
+        "OpenTelemetry",
+        "PostgreSQL",
+        "MongoDB",
+        "RabbitMQ"
+      ],
+      "keyResponsibilities": [
+        "Led the backend web engineering team",
+        "Reduced cloud infrastructure costs by 60% through strategic optimization initiatives",
+        "Led end-to-end implementation of OpenTelemetry across microservices that enhanced system monitoring capabilities"
+      ]
+    },
+    {
+      "id": "10minuteschool-sse",
+      "company": "10 Minute School",
+      "companyWebsite": "https://10minuteschool.com",
+      "role": "Senior Software Engineer",
+      "startDate": "March 2021",
+      "endDate": "May 2025",
+      "technologies": [
+        "Node.js",
         "NestJS",
-        "RabbitMQ",
+        "Go(Golang)",
         "AWS",
         "Firebase",
         "Docker",
-        "Kubernetes",
+        "RabbitMQ",
         "PostgreSQL",
         "MongoDB"
       ],
       "keyResponsibilities": [
-        "Promoted through Software Engineer and Senior Software Engineer to Engineering Manager for consistent high performance and leadership",
         "Rearchitected the caching strategy for the critical Central Routine API, slashing peak-hour p99 latency by over 85% to ensure a reliable user experience under high load",
         "Led Live Video Streaming infrastructure for conducting live classes with real-time interactions. Serves around 30k students participating in different live classes and handling approximately 100k RPM during peak hours every day",
         "Architected and deployed an in-house Video Processing Pipeline, reducing monthly operational costs by 75% while processing over 800 videos",
         "Reduced cloud infrastructure costs by 60% through strategic optimization initiatives",
-        "Led a sub-team to develop central Learning Report service that improved user engagement by providing comprehensive weekly and monthly reports",
         "Led end-to-end implementation of OpenTelemetry across microservices that enhanced system monitoring capabilities",
+        "Collaborated with cross functional teams to design, develop, and deploy features to production",
+        "Mentored junior engineers & interns to build production ready services",
+        "Implemented asynchronous job queue using Redis and BullMQ for background tasks"
+      ]
+    },
+    {
+      "id": "10minuteschool-se",
+      "company": "10 Minute School",
+      "companyWebsite": "https://10minuteschool.com",
+      "role": "Software Engineer",
+      "startDate": "August 2019",
+      "endDate": "February 2021",
+      "technologies": [
+        "Node.js",
+        "NestJS",
+        "AWS",
+        "Firebase",
+        "Docker",
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "keyResponsibilities": [
         "Developed REST API for different microservices of 10MS Billing System, handling 10k+ transactions every day",
         "Designed and led the development of an automated push notification system using event-driven Microservice Architecture",
         "Implemented REST API for Exam Service, resulting in onboarding 140k new users",
-        "Collaborated with cross functional teams to design, develop, and deploy features to production",
-        "Mentored junior engineers & interns to build production ready services",
         "Integrated AWS tools like S3, SNS, SQS and Lambda with the application"
       ]
     },
