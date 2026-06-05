@@ -47,7 +47,7 @@ export default async function Home() {
                     <div className="w-1/2 mx-auto lg:w-1/3">
                         <div className="mx-auto size-[280px] overflow-hidden rounded-full">
                             <Image
-                                src="/assets/toufiq4.png"
+                                src="/assets/toufiq.png"
                                 width={720}
                                 height={720}
                                 quality={95}
