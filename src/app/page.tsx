@@ -22,6 +22,7 @@ import Image from "next/image";
 
 export default async function Home() {
     const data = await getJSONData();
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
     const experienceGroups = data.workExperience.reduce(
         (groups, exp) => {
@@ -47,7 +48,7 @@ export default async function Home() {
                     <div className="w-1/2 mx-auto lg:w-1/3">
                         <div className="mx-auto size-[280px] overflow-hidden rounded-full">
                             <Image
-                                src="/assets/toufiq.png"
+                                src={`${basePath}/assets/toufiq.png`}
                                 width={720}
                                 height={720}
                                 quality={95}
@@ -213,7 +214,7 @@ export default async function Home() {
                         <Card key={project.title} className="flex flex-col lg:flex-row">
                             <div className="w-full lg:w-1/3 p-2 flex items-center">
                                 <Image
-                                    src={project.cover}
+                                    src={`${basePath}${project.cover}`}
                                     alt="Project 1"
                                     height={200}
                                     width={300}
