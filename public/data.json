@@ -168,7 +168,10 @@
         "Kubernetes"
       ],
       "keyResponsibilities": [
-        "Leading the Full Stack Engineering team"
+        "Facilitated system design sessions to architect 4 core CRM modules, ensuring scalable design patterns and seamless integration across components",
+        "Refactored legacy payment handling (Paysafe, Authorize.Net) to account for asynchronous gateway processing, designing an automated reconciliation pipeline to fix transaction status discrepancies",
+        "Designed end-to-end CI/CD pipelines to migrate development servers to on-premises infrastructure, cutting monthly operational costs by ~$600 USD",
+        "Managed and mentored 7 engineers through regular 1:1s, code reviews, and career growth plans, boosting overall team delivery speed and code quality"
       ]
     },
     {
@@ -276,7 +279,7 @@
       "id": "khamare",
       "company": "Khamar-e",
       "companyWebsite": "https://www.linkedin.com/company/khamar-e/",
-      "companyIntro": "Khamar-e is an agri-tech startup working towards a data-driven farming and supply chain ecosystem in Bangladesh",
+      "companyIntro": "Built the core software platform for an early-stage AgriTech IoT startup from concept to funding validation.\n",
       "role": "Full Stack Developer",
       "startDate": "February 2019",
       "endDate": "July 2019",
@@ -287,11 +290,20 @@
         "React"
       ],
       "keyResponsibilities": [
-        "Developed front-end and back-end of Health Tracker IOT device for tracking cattle activity"
+        "Designed and built full-stack applications (Angular, Node.js) to visualize real-time activity and health metrics from IoT livestock tracking hardware",
+        "Implemented message queuing with RabbitMQ and MongoDB to reliably process and store high-volume sensor telemetry data",
+        "Engineered the MVP software presented to investors, playing a direct role in securing initial VC funding from R-Ventures"
       ]
     }
   ],
   "education": [
+    {
+      "id": "tus",
+      "institution": "Technological University of the Shannon",
+        "degree": "Master of Science in Software Design With Cloud Native Computing",
+        "startDate": "September 2026",
+        "endDate": "September 2027"
+    },
     {
       "id": "aust",
       "institution": "Ahsanullah University of Science and Technology",
